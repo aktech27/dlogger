@@ -1,5 +1,5 @@
 {
-  "name": "dlogger",
+  "name": "@aktech27/dlogger",
   "version": "1.0.0",
   "description": "A DX focused zero-dependency logger for JS",
   "main": "./dist/index.js",
