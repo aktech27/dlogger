@@ -1,6 +1,6 @@
 import { LoggerConstructorProps, LogType } from "./types";
 
-class Logger {
+export class Logger {
   timestamps: boolean;
   colors: boolean;
 
