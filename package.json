@@ -1,0 +1,27 @@
+{
+  "name": "dlogger",
+  "version": "1.0.0",
+  "description": "A DX focused zero-dependency logger for JS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aktech27/dlogger.git"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "author": "Ahamed Kabeer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aktech27/dlogger/issues"
+  },
+  "homepage": "https://github.com/aktech27/dlogger#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
