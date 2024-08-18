@@ -62,3 +62,19 @@ const logger = new Logger({ timestamps: false, colors: false });
 
 export default logger;
 ```
+
+### CommonJS Example
+
+```javascript
+const { Logger } = require('@aktech27/dlogger');
+
+const logger = new Logger();
+
+logger.log('This is a log message');
+logger.info('This is an info message');
+logger.warn('This is a warning message');
+logger.error('This is an error message');
+
+module.exports = logger;
+```
+
