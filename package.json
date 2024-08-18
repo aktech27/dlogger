@@ -2,9 +2,12 @@
   "name": "dlogger",
   "version": "1.0.0",
   "description": "A DX focused zero-dependency logger for JS",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "test": "nodemon test/log.test.ts"
   },
   "repository": {
     "type": "git",
