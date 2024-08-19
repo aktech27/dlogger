@@ -14,7 +14,12 @@
     "url": "git+https://github.com/aktech27/dlogger.git"
   },
   "keywords": [
-    "logger"
+    "logger",
+    "dlogger",
+    "sequelize-logging",
+    "logging",
+    "console",
+    "log"
   ],
   "author": "Ahamed Kabeer",
   "license": "ISC",

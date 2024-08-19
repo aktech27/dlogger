@@ -26,6 +26,9 @@ export class Logger {
         case 'INFO':
           text = '\x1b[34m';
           break;
+        case 'SQL':
+          text = '\x1b[32m';
+          break;
         default:
           break;
       }
@@ -63,6 +66,14 @@ export class Logger {
 
   info(...params: any[]) {
     this.print('INFO', this.paramsFormatter(params));
+  }
+
+  sqlLog(args: any[]) {
+    if (args.length > 2) { // Benchmark ms is present
+      this.print('SQL', this.paramsFormatter([args[0], `\x1b[0m- ${args[1]}ms`]));
+    } else {
+      this.print('SQL', this.paramsFormatter([args[0]]));
+    }
   }
 }
 
