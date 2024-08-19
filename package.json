@@ -1,6 +1,6 @@
 {
   "name": "@aktech27/dlogger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A DX focused zero-dependency logger for JS",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,7 +14,12 @@
     "url": "git+https://github.com/aktech27/dlogger.git"
   },
   "keywords": [
-    "logger"
+    "logger",
+    "dlogger",
+    "sequelize-logging",
+    "logging",
+    "console",
+    "log"
   ],
   "author": "Ahamed Kabeer",
   "license": "ISC",
