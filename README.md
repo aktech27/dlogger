@@ -11,6 +11,7 @@ A zero-dependency, developer-friendly logger for Node.js applications. This logg
 - **Optional Timestamps**: Include or exclude timestamps in log messages.
 - **Color-Coded Output**: Enable or disable color-coded log levels for terminal output.
 - **SQL Logging**: Special support for logging SQL queries, especially useful with Sequelize.
+- **Mongoose Logging**: Special support for logging MongoDB queries while using mongoose.
 
 
 ## Disclaimer
@@ -84,7 +85,7 @@ export default logger;
 
 ## Using with sequelize for SQL query
 
-`DLogger` can also be integrated with Sequelize to log SQL queries, providing a clear, color-coded view of the queries being executed.
+`DLogger` can also be integrated with Sequelize to log SQL queries, providing a clear, color-coded view of the queries being executed using the `sqlLog` method.
 
 [Refer Sequelize Documentation](https://sequelize.org/docs/v6/getting-started/#logging)
 
@@ -101,5 +102,23 @@ const sequelize = new Sequelize('your_db_uri', {
   benchmark: true // Optional - but works with bench mark too
 });
 
-export default logger;
+```
+
+## Using with mongoose for MongoDB query
+
+`DLogger` can also be integrated with mongoose to log MongoDB queries, providing a clear, color-coded view of the queries being executed using the `mongoLog` method.
+
+[Refer Mongoose Documentation](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.set())
+
+
+### Example Usage
+```javascript
+const { Logger } = require('@aktech27/dlogger');
+const mongoose = require('mongoose');
+
+const logger = new Logger();
+
+mongoose.connect('your_mongo_uri')
+mongoose.set('debug', (...msg) => logger.mongoLog(msg));
+
 ```
