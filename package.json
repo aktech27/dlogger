@@ -1,7 +1,7 @@
 {
   "name": "@aktech27/dlogger",
-  "version": "1.0.2",
-  "description": "A DX focused zero-dependency logger for JS",
+  "version": "1.0.3",
+  "description": "A DX focused zero-dependency logger for NodeJS applications",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -22,7 +22,7 @@
     "log"
   ],
   "author": "Ahamed Kabeer",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aktech27/dlogger/issues"
   },
