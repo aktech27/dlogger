@@ -9,8 +9,13 @@ export class Logger {
     this.timestamps = opts.timestamps;
     this.colors = opts.colors;
   }
+
   paramsFormatter(params: any[]) {
     return params.map((p) => ((typeof p) === 'object' ? JSON.stringify(p) : p)).join(' ');
+  }
+
+  mongoParamsFormatter(params: any[]) {
+    return `Executing: db.${params[0]}.${params[1]}(${JSON.stringify(params[2])},${JSON.stringify(params[3])})`;
   }
 
   logTypeFormatter(type: LogType) {
@@ -27,6 +32,7 @@ export class Logger {
           text = '\x1b[34m';
           break;
         case 'SQL':
+        case 'MONGO':
           text = '\x1b[32m';
           break;
         default:
@@ -74,6 +80,10 @@ export class Logger {
     } else {
       this.print('SQL', this.paramsFormatter([args[0]]));
     }
+  }
+
+  mongoLog(args: any[]) {
+    this.print('MONGO', this.mongoParamsFormatter(args));
   }
 }
 

@@ -3,6 +3,6 @@ interface LoggerConstructorProps {
   colors?: boolean;
 }
 
-type LogType = 'LOG' | 'INFO' | 'WARN' | 'ERROR' | 'SQL';
+type LogType = 'LOG' | 'INFO' | 'WARN' | 'ERROR' | 'SQL' | 'MONGO';
 
 export { LoggerConstructorProps, LogType }
